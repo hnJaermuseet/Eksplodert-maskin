@@ -50,6 +50,7 @@ public class eksplodertmaskin {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
+					// TODO: run script in its own process and dont let the user click while the process is running
 					System.out.println("Label clicked.");
 					Process proc = Runtime.getRuntime().exec(
 							new String[] {"bash", "-c", to_run});
