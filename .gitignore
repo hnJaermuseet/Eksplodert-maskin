@@ -9,7 +9,10 @@
 !aktivitet*
 !/Desktop
 !/Desktop/*
-
+!/eksplodert-maskin-src
+!/eksplodert-maskin-src/*
+!/eksplodert-maskin-src/src
+!/eksplodert-maskin-src/src/*
 
 # Ignore some more
 .fluxbox/log
