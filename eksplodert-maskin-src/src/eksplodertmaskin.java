@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Frame;
+import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
@@ -29,7 +30,9 @@ public class eksplodertmaskin {
 		}
 		
 		final String to_run = args[0];
+		
 		Frame f = new Frame("Eksplodert maskin - Vitenfabrikken");
+		f.setUndecorated(true);
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
@@ -85,7 +88,8 @@ public class eksplodertmaskin {
 			public void windowClosing(WindowEvent e) {System.exit(0);}});
 		f.add("Center",panel);
 		f.pack();
-		f.setSize(new Dimension(320,550));
+		
+		f.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 		f.setVisible(true);
 	}
 
