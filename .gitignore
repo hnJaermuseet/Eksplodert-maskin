@@ -13,6 +13,8 @@
 !/eksplodert-maskin-src/*
 !/eksplodert-maskin-src/src
 !/eksplodert-maskin-src/src/*
+!/eksplodert-maskin-bin
+!/eksplodert-maskin-bin/*
 
 # Ignore some more
 .fluxbox/log
