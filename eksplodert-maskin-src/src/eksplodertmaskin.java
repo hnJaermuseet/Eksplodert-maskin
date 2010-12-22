@@ -99,6 +99,7 @@ public class eksplodertmaskin {
 		panel.add(Box.createVerticalGlue());
 		
 		JPanel panel2 = new JPanel();
+		// TODO: Få opp denne teksten:
 		panel2.add(new JLabel ("Kilde - bilde: Wikimedia Commons, GFDL-lisens"));
 		panel2.add(panel);
 		
