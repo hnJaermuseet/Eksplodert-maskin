@@ -1,13 +1,15 @@
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -48,7 +50,23 @@ public class eksplodertmaskin {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
-					Process p = Runtime.getRuntime().exec(to_run);
+					System.out.println("Label clicked.");
+					Process proc = Runtime.getRuntime().exec(
+							new String[] {"bash", "-c", to_run});
+					InputStream inputstream = proc.getInputStream(); 
+					InputStreamReader inputstreamreader = new InputStreamReader(inputstream); 
+					BufferedReader bufferedreader = new BufferedReader(inputstreamreader); 
+					String line; 
+					while ((line = bufferedreader.readLine()) != null) { 
+						System.out.println("OUTPUT = " + line); 
+					} 
+					try { 
+						if (proc.waitFor() != 0) { 
+							System.err.println("exit value = " + proc.exitValue()); 
+						} 
+					} catch (InterruptedException e) { 
+						System.err.println("ERROR = " + e); 
+					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
