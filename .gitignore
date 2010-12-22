@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except these
+!/.fluxbox
+!/.fluxbox/*
+!readme.txt
+!.gitignore
+
+
+# Ignore some more
+.fluxbox/log
