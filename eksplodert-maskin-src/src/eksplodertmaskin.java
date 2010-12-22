@@ -1,10 +1,7 @@
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
@@ -13,9 +10,7 @@ import java.io.IOException;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -26,6 +21,14 @@ public class eksplodertmaskin {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		if(args.length < 1)
+		{
+			System.out.println("Må oppgi program som skal kjøres.");
+			System.exit(0);
+		}
+		
+		final String to_run = args[0];
 		Frame f = new Frame("Eksplodert maskin - Vitenfabrikken");
 		
 		JPanel panel = new JPanel();
@@ -41,7 +44,7 @@ public class eksplodertmaskin {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
-					Process p = Runtime.getRuntime().exec("/home/vitenfabrikken/aktivitet-cd.sh");
+					Process p = Runtime.getRuntime().exec(to_run);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
