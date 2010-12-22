@@ -25,13 +25,14 @@ public class eksplodertmaskin {
 	 */
 	public static void main(String[] args) {
 		
-		if(args.length < 1)
+		if(args.length < 2)
 		{
-			System.out.println("Må oppgi program som skal kjøres.");
+			System.out.println("Må oppgi plassering til bilde samt" +
+					" plassering for programmet som skal kjøres.");
 			System.exit(0);
 		}
 		
-		final String to_run = args[0];
+		final String to_run = args[1];
 		
 		Frame f = new Frame("Eksplodert maskin - Vitenfabrikken");
 		f.setUndecorated(true);
@@ -40,7 +41,7 @@ public class eksplodertmaskin {
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 		
 		
-		ImageIcon ikon = new ImageIcon("CD-ROM-resize.png");
+		ImageIcon ikon = new ImageIcon(args[0]);
 		JLabel cdrom = new JLabel("Lag aktivitet på CD-rom",
 			ikon, JLabel.CENTER);
 		cdrom.setForeground(Color.white);
