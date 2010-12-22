@@ -6,6 +6,9 @@
 !/.fluxbox/*
 !readme.txt
 !.gitignore
+!aktivitet*
+!/Desktop
+!/Desktop/*
 
 
 # Ignore some more
