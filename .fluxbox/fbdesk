@@ -1,0 +1,12 @@
+session.styleFile:	/usr/share/fluxbox/styles/BlueNight
+fbdesk.snapX:	5
+fbdesk.doubleClickInterval:	200
+fbdesk.font:	fixed
+fbdesk.iconFile:	~/.fluxbox/fbdesk.icons
+fbdesk.textColor:	black
+fbdesk.textBackground:	white
+fbdesk.textAlpha:	0
+fbdesk.iconAlpha:	0
+fbdesk.lockPositions:	false
+fbdesk.textPlacement:	Bottom
+fbdesk.snapY:	5

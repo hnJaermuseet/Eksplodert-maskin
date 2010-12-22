@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Lag aktivitet på CD-rom
+Exec=~/aktivitet-cd.sh
+Icon=
+Pos= 600 600
+[end]
+
