@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Lag aktivitet på CD-rom
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Exec=/home/vitenfabrikken/aktivitet-cd.sh
+Name[en_US]=Lag aktivitet på CD-rom
+Icon=/usr/share/icons/gnome/scalable/devices/cdrom_unmount.svg
