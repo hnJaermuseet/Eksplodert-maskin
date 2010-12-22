@@ -41,6 +41,7 @@ public class eksplodertmaskin {
 		ImageIcon ikon = new ImageIcon("CD-ROM-resize.png");
 		JLabel cdrom = new JLabel("Lag aktivitet på CD-rom",
 			ikon, JLabel.CENTER);
+		cdrom.setForeground(Color.white);
 		
 		cdrom.addMouseListener(new MouseListener() {
 
